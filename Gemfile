@@ -17,11 +17,6 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'bcrypt', '3.1.11'
-  gem 'carrierwave'
-  gem 'mini_magick'
-  gem 'jquery-rails'
-  gem 'bootstrap'
 end
 
 group :development do
@@ -38,3 +33,8 @@ group :test do
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'jquery-rails'
+gem 'bootstrap'
+gem 'bcrypt', '3.1.11'
+gem 'carrierwave'
+gem 'mini_magick'
