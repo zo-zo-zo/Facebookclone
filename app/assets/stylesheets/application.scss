@@ -2,6 +2,13 @@
  html{position: relative;
    min-height:100%;
  }
+ .top{
+   position: relative;
+   min-height:100%;
+   background-color:#1a63d0;
+   color:#ffffff;
+   font-size:  40px;
+ }
  a:hover{
    text-decoration:none;
  }
@@ -12,11 +19,11 @@
    background-color: #1a63d0;
  }
  .bottom .copyright {
-   color: #e5e5e5;
+   color: #ffffff;
    font-weight: 600;
  }
  .copyright a {
-   color: #f2ff49;
+   color: #ffffff;
    margin-left: 3px;
    padding-right: 3px;
  }
@@ -27,10 +34,10 @@
    font-weight: 400;
  }
  .copyright p span {
-   color: #d1caca;
+   color: #ffffff;
  }
  .bottom .copyright p, .bottom .copyright a:hover{
-   color: #6c6d83;
+   color: #ffffff;
  }
  body {
    position: relative;
