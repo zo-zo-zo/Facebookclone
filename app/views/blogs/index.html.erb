@@ -7,7 +7,6 @@
     <th>タイトル</th>
   </tr>
 <% @blogs.each do |blog| %>
-
   <tr>
     <td>
     <p><%= blog.title %></p>
@@ -21,7 +20,5 @@
   </tr>
 <% end %>
 </table>
-
-<br>
 
 <%= link_to '新しくブログを投稿する', new_blog_path,class: 'btn btn-default' %>
