@@ -59,7 +59,8 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :content, :image)
+    params.require(:blog).permit(:title, :content, :image, :image_cache)
+    # ここで:image_cacheの記載がなかったためcomfirmを通すと画像がアップロードされなかった。
   end
 
   def set_blog

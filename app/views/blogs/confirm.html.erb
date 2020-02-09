@@ -3,6 +3,7 @@
 <%= form_with(model: @blog, local: true) do |form| %>
   <%= form.hidden_field :title %>
   <%= form.hidden_field :content %>
+  <%= form.hidden_field :image_cache %>
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
   <p><%= image_tag @blog.image.url %></p>
