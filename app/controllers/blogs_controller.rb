@@ -48,7 +48,9 @@ class BlogsController < ApplicationController
   end
 
   private
-
+# ログインしないと直接URLを入れても進めないようにする。
+# User.find_byでidを持ってくる。
+# どういう状態がログインしている状態なのか理解が必要
   def is_logged_in
     @current_user = User.find_by(id: session[:user_id])
     if @current_user.nil?
