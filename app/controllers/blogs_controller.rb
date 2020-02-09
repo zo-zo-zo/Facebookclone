@@ -1,5 +1,7 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :is_logged_in, only: [:index]
+
   def index
     @blogs = Blog.all
   end
@@ -46,6 +48,13 @@ class BlogsController < ApplicationController
   end
 
   private
+
+  def is_logged_in
+    @current_user = User.find_by(id: session[:user_id])
+    if @current_user.nil?
+      redirect_to new_session_path
+    end
+  end
 
   def blog_params
     params.require(:blog).permit(:title, :content, :image)
