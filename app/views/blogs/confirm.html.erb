@@ -1,12 +1,12 @@
-<h3>以下の内容で、送信する。</h3>
+<h3 class= center_tag>以下の内容で、送信する。</h3>
 
 <%= form_with(model: @blog, local: true) do |form| %>
   <%= form.hidden_field :title %>
   <%= form.hidden_field :content %>
   <%= form.hidden_field :image_cache %>
-  <p>タイトル:<%= @blog.title %></p>
-  <p>本文:<%= @blog.content %></p>
-  <p><%= image_tag @blog.image.url %></p>
-  <%= form.submit  "登録する" %>
-  <%= form.submit "戻る", name: 'back' %>
+  <p class= center_tag>タイトル:<%= @blog.title %></p>
+  <p class= center_tag>本文:<%= @blog.content %></p>
+  <p class= center_tag><%= image_tag @blog.image.url %></p>
+  <p class= center_tag><%= form.submit  "登録する" %></p>
+  <p class= center_tag><%= form.submit "戻る", name: 'back' %></p>
 <% end %>

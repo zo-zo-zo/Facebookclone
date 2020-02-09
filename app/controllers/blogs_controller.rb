@@ -1,6 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :is_logged_in, only: [:index]
+  before_action :is_logged_in, only: [:index,:show, :edit, :update]
 
   def index
     @blogs = Blog.all
@@ -50,7 +50,7 @@ class BlogsController < ApplicationController
   private
 # ログインしないと直接URLを入れても進めないようにする。
 # User.find_byでidを持ってくる。
-# どういう状態がログインしている状態なのか理解が必要
+# どういう記述だとログインしている状態？
   def is_logged_in
     @current_user = User.find_by(id: session[:user_id])
     if @current_user.nil?
