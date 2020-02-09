@@ -3,13 +3,13 @@
 <p><%= notice %></p>
 
 <table>
-  <tr>
-    <th>タイトル</th>
-  </tr>
 <% @blogs.each do |blog| %>
   <tr>
     <td>
+    <div>タイトル</div>
     <p><%= blog.title %></p>
+    <div>投稿者</div>
+    <p><%= blog.user.name %></p>
     <div>内容</div>
     <p><%= blog.content %></p>
     <p><%= image_tag blog.image.url if blog.image.present? %></p>
