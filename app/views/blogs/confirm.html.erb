@@ -6,7 +6,7 @@
   <%= form.hidden_field :image_cache %>
   <p class= center_tag>タイトル:<%= @blog.title %></p>
   <p class= center_tag>本文:<%= @blog.content %></p>
-  <p class= center_tag><%= image_tag @blog.image.url %></p>
-  <p class= center_tag><%= form.submit  "登録する" %></p>
-  <p class= center_tag><%= form.submit "戻る", name: 'back' %></p>
+  <p class= image_tag><%= image_tag @blog.image.url %></p>
+  <p class= submit_tag><%= form.submit  "登録する" %></p>
+  <p class= submit_tag><%= form.submit "戻る", name: 'back' %></p>
 <% end %>
