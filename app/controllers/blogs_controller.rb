@@ -48,9 +48,7 @@ class BlogsController < ApplicationController
   end
 
   private
-# ログインしないと直接URLを入れても進めないようにする。
-# User.find_byでidを持ってくる。
-# どういう記述だとログインしている状態？
+
   def is_logged_in
     @current_user = User.find_by(id: session[:user_id])
     if @current_user.nil?
@@ -60,7 +58,6 @@ class BlogsController < ApplicationController
 
   def blog_params
     params.require(:blog).permit(:title, :content, :image, :image_cache)
-    # ここで:image_cacheの記載がなかったためcomfirmを通すと画像がアップロードされなかった。
   end
 
   def set_blog
